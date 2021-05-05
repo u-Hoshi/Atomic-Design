@@ -5,7 +5,7 @@ import { UserIconWithName } from "../molecules/user/UserIconWithName";
 export const UserCard = (props) => {
   const { user } = props;
   return (
-    <Card>
+    <SCard>
       <UserIconWithName image={user.image} name={user.name} />
       <SDl>
         <dt>メール</dt>
@@ -17,7 +17,7 @@ export const UserCard = (props) => {
         <dt>WEB</dt>
         <dd>{user.company.website}</dd>
       </SDl>
-    </Card>
+    </SCard>
   );
 };
 
@@ -32,4 +32,10 @@ const SDl = styled.dl`
     padding-bottom: 8px;
     overflow-wrap: break-word;
   }
+`;
+
+const SCard = styled(Card)`
+  max-width: 200px;
+  background-color: red;
+  color: blue;
 `;

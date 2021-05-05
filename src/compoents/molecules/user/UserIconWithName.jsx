@@ -20,7 +20,8 @@ const SImg = styled.img`
 `;
 
 const SName = styled.p`
-  font-size: bold;
+  font-size: 18px;
+  font-weight: bold;
   margin: 0;
   color: #40514e;
 `;
