@@ -8,11 +8,17 @@ import { DefaultLayout } from "./compoents/templates/DefaultLayout";
 import { Router } from "./router/Router";
 
 import "./styles.css";
+import { UserProvider } from "./providers/UserProvider";
+import { RecoilRoot } from "recoil";
 
 export default function App() {
   return (
     <>
-      <Router />
+      <RecoilRoot>
+        <UserProvider>
+          <Router />
+        </UserProvider>
+      </RecoilRoot>
     </>
   );
 }
